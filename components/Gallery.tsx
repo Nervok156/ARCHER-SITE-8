@@ -4,13 +4,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Массив изображений с путями к файлам в папке images
 const GALLERY_IMAGES = [
-  { id: 1, caption: 'Видение битвы при Хельмовой Пади', filename: 'photo1.jpg' },
-  { id: 2, caption: 'Стычка на переправе', filename: 'photo2.jpg' },
-  { id: 3, caption: 'Штурм крепости', filename: 'photo3.jpg' },
-  { id: 4, caption: 'Битва у стен Минас-Тирита', filename: 'photo4.jpg' },
-  { id: 5, caption: 'Схватка в лесу Фангорн', filename: 'photo5.jpg' },
-  { id: 6, caption: 'Осада Барад-Дура', filename: 'photo6.jpg' },
-  { id: 7, caption: 'Битва на Пеленнорских полях', filename: 'photo7.jpg' },
+  { id: 1, caption: '3 стиля персонажа', filename: 'photo1.jpg' },
+  { id: 2, caption: 'Арчер на чиле', filename: 'photo2.jpg' },
+  { id: 3, caption: 'Использование способности Арчера', filename: 'photo3.jpg' },
+  { id: 4, caption: 'Глюпи вумен', filename: 'photo4.jpg' },
+  { id: 5, caption: 'Unlimited Blade Works', filename: 'photo5.jpg' },
+  { id: 6, caption: 'Ночь схватки', filename: 'photo6.jpg' },
+  { id: 7, caption: 'Слуга со своим мастером', filename: 'photo7.jpg' },
   { id: 8, caption: 'Финальное противостояние', filename: 'photo8.jpg' }
 ];
 

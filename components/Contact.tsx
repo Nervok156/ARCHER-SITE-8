@@ -159,9 +159,6 @@ export const Contact: React.FC = () => {
                       />
                       <div className="absolute -bottom-2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-blood-600/30 to-transparent"></div>
                     </div>
-                    <p className="font-serif text-iron-600 text-sm mt-2 italic">
-                      * Подобно истинному имени Слуги
-                    </p>
                   </div>
                   
                   {/* Email field - Magical Connection */}
@@ -185,9 +182,6 @@ export const Contact: React.FC = () => {
                       />
                       <div className="absolute -bottom-2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-blood-600/30 to-transparent"></div>
                     </div>
-                    <p className="font-serif text-iron-600 text-sm mt-2 italic">
-                      * Для передачи командных заклинаний
-                    </p>
                   </div>
                 </div>
 
@@ -212,9 +206,6 @@ export const Contact: React.FC = () => {
                     ></textarea>
                     <div className="absolute -bottom-2 left-4 right-4 h-[1px] bg-gradient-to-r from-transparent via-blood-600/30 to-transparent"></div>
                   </div>
-                  <p className="font-serif text-iron-600 text-sm mt-2 italic">
-                    * Каждое слово имеет магический вес
-                  </p>
                 </div>
 
                 {/* Status Messages */}
@@ -296,9 +287,6 @@ export const Contact: React.FC = () => {
 
                 {/* Privacy notice */}
                 <div className="text-center pt-4 border-t border-iron-400/20">
-                  <p className="font-serif text-iron-600 text-sm italic">
-                    Заключая сей контракт, вы соглашаетесь с передачей вашего магического следа Творцу.
-                  </p>
                 </div>
               </form>
 
@@ -312,7 +300,6 @@ export const Contact: React.FC = () => {
                 
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 border-2 border-blood-600/50 rounded-full bg-gradient-to-br from-blood-600/10 to-blood-800/10 flex items-center justify-center mb-3 shadow-inner">
-                    <span className="text-blood-700/70 text-xl font-bold">使</span>
                   </div>
                   <span className="font-display text-iron-900 text-sm uppercase tracking-widest">Печать Творца</span>
                 </div>

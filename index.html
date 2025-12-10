@@ -18,10 +18,10 @@
             },
             colors: {
               // Shifted from pure blacks/grays to warm burgundies and browns
-              'iron-950': '#1a0505', // Deep Burgundy Black
-              'iron-900': '#2b0b0b', // Dark Burgundy
-              'iron-800': '#450a0a', // Dried Blood
-              'iron-700': '#5e1010', // Rust
+              'iron-950': '#4a1212', // Lighter Burgundy Red
+              'iron-900': '#5a1a1a', // Medium Burgundy
+              'iron-800': '#6b1f1f', // Light Burgundy
+              'iron-700': '#7a2525', // Rust Red
               
               // Brightened and intensified reds/flames
               'blood-600': '#dc2626', // Vivid Red
@@ -54,7 +54,7 @@
     </script>
     <style>
       body {
-        background-color: #1a0505;
+        background-color: #4a1212;
         color: #fed7d7;
       }
       /* Custom Scrollbar */
@@ -62,10 +62,10 @@
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #2b0b0b; 
+        background: #5a1a1a; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #5e1010; 
+        background: #7a2525; 
         border: 1px solid #dc2626;
       }
       ::-webkit-scrollbar-thumb:hover {
@@ -93,6 +93,56 @@
         0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0; }
         20% { opacity: 0.8; }
         100% { transform: translateY(-100vh) scale(0) rotate(180deg); opacity: 0; }
+      }
+
+      /* Spark Animation */
+      @keyframes sparkUp {
+        0% {
+          transform: translateY(100vh) translateX(0) scale(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(50vh) translateX(var(--spark-x, 0)) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-10vh) translateX(calc(var(--spark-x, 0) * 1.5)) scale(0);
+          opacity: 0;
+        }
+      }
+
+      .spark {
+        position: absolute;
+        width: var(--spark-size, 4px);
+        height: var(--spark-size, 4px);
+        border-radius: 50%;
+        filter: blur(2px);
+        animation: sparkUp var(--spark-duration, 4s) infinite linear;
+        animation-delay: var(--spark-delay, 0s);
+        left: var(--spark-left, 50%);
+      }
+
+      .spark-red {
+        background: radial-gradient(circle, #ff4444 0%, #ff0000 40%, #dc2626 70%, transparent 100%);
+        box-shadow: 
+          0 0 10px #ff4444,
+          0 0 20px #ff0000,
+          0 0 30px #dc2626,
+          0 0 40px rgba(255, 68, 68, 0.8),
+          0 0 50px rgba(255, 0, 0, 0.6);
+      }
+
+      .spark-yellow {
+        background: radial-gradient(circle, #ffeb3b 0%, #ffc107 40%, #ff9800 70%, transparent 100%);
+        box-shadow: 
+          0 0 10px #ffeb3b,
+          0 0 20px #ffc107,
+          0 0 30px #ff9800,
+          0 0 40px rgba(255, 235, 59, 0.8),
+          0 0 50px rgba(255, 193, 7, 0.6);
       }
 
       /* Medieval Scroll Reveal Animation */

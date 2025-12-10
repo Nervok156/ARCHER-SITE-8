@@ -218,7 +218,7 @@ export const Bio: React.FC = () => {
           <div className="relative mt-12 lg:mt-0 flex flex-col items-center">
              <div className="bg-parchment-200/5 p-4 rounded-full border-2 border-dashed border-iron-500/60 backdrop-blur-sm relative w-full max-w-[450px] aspect-square shadow-[0_0_30px_rgba(0,0,0,0.3)]">
                 {/* Decoration */}
-                <div className="absolute inset-3 border border-dashed border-iron-600/30 rounded-full animate-[spin_60s_linear_infinite]"></div>
+                <div className="absolute inset-3 border border-dashed border-iron-600/30 rounded-full rotating-circle"></div>
 
                 <div className="h-full w-full">
                   <ResponsiveContainer width="100%" height="100%">
@@ -255,6 +255,21 @@ export const Bio: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* CSS для анимации вращения круга */}
+      <style jsx global>{`
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .rotating-circle {
+          animation: rotate 60s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
